@@ -1,7 +1,7 @@
 <?php
 
 class Persona {
-    public $telefono;
+   // public $telefono;
     //atributos
     public $nombre;
     private $apellido;
