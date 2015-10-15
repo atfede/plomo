@@ -1,7 +1,7 @@
 <?php
 
 class Profesor extends Persona {
-
+    //Esto es una mierda!
     //atributos
     private $materias = Array();
     private $aniosExperiencia;
