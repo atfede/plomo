@@ -1,6 +1,6 @@
 <?php
 
-class Persona {
+class Persona extends CI_Model{
    
     //atributos
     public $nombre;
