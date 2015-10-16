@@ -32,9 +32,9 @@ session_start();
             _oneall.push(['social_login', 'do_render_ui', 'social_login_demo']);
         </script>
 
-        <?php 
+        <?php
 //            include_once './application/views/master/head.php';
-            $this->load->view('master/head');
+        $this->load->view('master/head');
         ?>
 
 
@@ -83,8 +83,8 @@ session_start();
                 <div class="row row-offcanvas row-offcanvas-left">
 
                     <!--sidebar -->
-                    <?php 
-                        //include_once './application/views/master/sidebar.php';
+                    <?php
+                    //include_once './application/views/master/sidebar.php';
                     $this->load->view("master/sidebar");
                     ?>
                     <!--sidebar -->
@@ -106,22 +106,22 @@ session_start();
                                         <div class="panel panel-default">
                                             <div class="panel-thumbnail"><img src="/img/bg_5.jpg" class="img-responsive"></div>
                                             <div class="panel-body">
-                                                <p class="lead">Usuarios recientes</p>
+<!--                                                <p class="lead">Usuarios recientes</p>
                                                 <p> 
+                                                <?php
+//                                                    $link = mysqli_connect("localhost", "1018246", "qwerpoiu1", "1018246");
+//                                                    $results = mysqli_query($link, "SELECT name FROM usuarios");
+//                                                    while ($datos = mysqli_fetch_array($results)) {
+//                                                        echo $datos["name"] . "<br>";
+//                                                    }
+                                                ?>
+                                                </p>-->
 
-                                                    <?php
-                                                    $link = mysqli_connect("localhost", "1018246", "qwerpoiu1", "1018246");
-                                                    $results = mysqli_query($link, "SELECT name FROM usuarios");
-                                                    while ($datos = mysqli_fetch_array($results)) {
-                                                        echo $datos["name"] . "<br>";
-                                                    }
-//                                                    // Frees the memory associated with a result
-//                                                    $results->free();
-//                                                    // close connection 
-//                                                    $mysqli->close();
-                                                    ?>
-
-                                                </p>
+                                                <?php
+                                                foreach ($records as $rec) { //$records es la variable que pase desde el controller
+                                                    echo "Id: " . $rec->id . " | Nombre: " . $rec->name . " | Email: " . $rec->email;
+                                                }
+                                                ?>
 
                                                 <p>
                                                     <img src="https://lh3.googleusercontent.com/uFp_tsTJboUY7kue5XAsGA=s28" width="28px" height="28px">
@@ -243,7 +243,7 @@ session_start();
                                     </div>
                                 </div><!--/row-->
 
-                                <?php // include_once './master/footer.php';     ?>
+                                <?php // include_once './master/footer.php';      ?>
 
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -305,8 +305,8 @@ session_start();
         <!-- script references -->
 <!--        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>-->
         <!--<script src="js/scripts.js"></script>-->
-        
-<!--<script src="<?php // echo base_url("assets/js/scripts.js"); ?>"></script>-->
+
+<!--<script src="<?php // echo base_url("assets/js/scripts.js");     ?>"></script>-->
         <script src="<?php echo base_url("./js/scripts.js"); ?>"></script>
     </body>
 </html>
